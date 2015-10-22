@@ -2,8 +2,10 @@ CHANGELOG
 
 
 [0.0.1]
-- fifths function
+- Basic operations: pitchClass, setOctave, setDefaultOctave, simplify, semitones, compare
+- Arithmetic operations: toFifths, add, subtract, multiply
 
 DIST
+[0.0.1] 7065 / 2318
 
 BENCHMARKS

@@ -15,11 +15,11 @@ vows.describe('pitch-fifths').addBatch({
       assert.deepEqual(fifths([7, 0, 0]), [0, 0])
     },
     'without octaves': function () {
-      assert.deepEqual(fifths([1, 0, null]), [2, null])
-      assert.deepEqual(fifths([1, 1, null]), [9, null])
-      assert.deepEqual(fifths([1, 2, null]), [16, null])
-      assert.deepEqual(fifths([1, -1, null]), [-5, null])
-      assert.deepEqual(fifths([1, -2, null]), [-12, null])
+      assert.deepEqual(fifths([1, 0]), [2, null])
+      assert.deepEqual(fifths([1, 1]), [9, null])
+      assert.deepEqual(fifths([1, 2]), [16, null])
+      assert.deepEqual(fifths([1, -1]), [-5, null])
+      assert.deepEqual(fifths([1, -2]), [-12, null])
     },
     'ascending interval fifths': function () {
       assert.deepEqual(fifths(notation.arr('1P')), [0, 0])

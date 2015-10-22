@@ -72,7 +72,7 @@ op.setDefaultOctave = function (oct, arr) {
   if (arguments.length === 1) return function (arr) { return op.setDefaultOctave(oct, arr) }
   if (!arr) return null
   var c = arr.slice()
-  c[2] = c[2] === null ? oct : c[2]
+  c[2] = c[2] === null || c[2] === undefined ? oct : c[2]
   return c
 }
 

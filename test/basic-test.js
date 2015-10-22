@@ -19,7 +19,7 @@ vows.describe('pitch-op').addBatch({
     assert.equal(op.simplify(null), null)
   },
   'default octave': function () {
-    assert.deepEqual(op.setDefaultOctave(3, [1, 2, null]), [1, 2, 3])
+    assert.deepEqual(op.setDefaultOctave(3, [1, 2]), [1, 2, 3])
     assert.deepEqual(op.setDefaultOctave(3, [1, 2, 0]), [1, 2, 0])
     assert.deepEqual(op.setDefaultOctave(3, null), null)
     var src = [ [1, 2, null], [4, 5, 1] ]

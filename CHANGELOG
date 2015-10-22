@@ -1,5 +1,7 @@
 CHANGELOG
 
+[0.0.2]
+- setDefaultOctave bug fix
 
 [0.0.1]
 - Basic operations: pitchClass, setOctave, setDefaultOctave, simplify, semitones, compare

@@ -1,0 +1,30 @@
+{
+  "name": "music.operator",
+  "version": "0.0.0",
+  "description": "The music operator",
+  "main": "index.js",
+  "scripts": {
+    "test": "vows --spec test/*.js",
+    "docs": "docme API.md",
+    "dist": "browserify index.js > dist/music.operator.js && browserify index.js | uglifyjs > dist/music.operator.min.js && ls -all dist/*",
+    "coverage": "istanbul cover vows test/*.js",
+    "cover": "npm run coverage && open ./coverage/lcov-report/index.html",
+    "benchmarks": "node test/benchmarks/*.js",
+    "climate": "npm run coverage && npm run codeclimate",
+    "codeclimate": "CODECLIMATE_REPO_TOKEN= codeclimate-test-reporter < coverage/lcov.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danigb/music.operator.git"
+  },
+  "keywords": [
+    "music",
+    "music.operator"
+  ],
+  "author": "danigb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danigb/music.operator/issues"
+  },
+  "homepage": "https://github.com/danigb/music.operator#readme"
+}

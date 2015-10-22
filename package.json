@@ -26,5 +26,11 @@
   "bugs": {
     "url": "https://github.com/danigb/music.operator/issues"
   },
-  "homepage": "https://github.com/danigb/music.operator#readme"
+  "homepage": "https://github.com/danigb/music.operator#readme",
+  "dependencies": {
+    "music.notation": "file:../notation"
+  },
+  "devDependencies": {
+    "vows": "^0.8.1"
+  }
 }

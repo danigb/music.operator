@@ -1,6 +1,7 @@
 CHANGELOG
 
 [0.0.2]
+- semitones are renamed to height and return values for pitch classes
 - setDefaultOctave bug fix
 
 [0.0.1]

@@ -25,9 +25,10 @@ vows.describe('pitch-op').addBatch({
     var src = [ [1, 2, null], [4, 5, 1] ]
     assert.deepEqual(src.map(op.setDefaultOctave(2)), [ [ 1, 2, 2 ], [ 4, 5, 1 ] ])
   },
-  'semitones': function () {
-    assert.equal(op.semitones([0, 0, 0]), 0)
-    assert.equal(op.semitones([1, 1, 0]), 3)
+  'height': function () {
+    assert.equal(op.height([0, 0, 0]), 0)
+    assert.equal(op.height([1, 1, 0]), 3)
+    assert.equal(op.height([1, 1]), 3)
   },
   'comparator': function () {
     var src = [ [1, 0, 0], [3, 0, 0], [2, 0, 0] ]

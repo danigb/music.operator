@@ -80,16 +80,21 @@ var SEMITONES = [0, 2, 4, 5, 7, 9, 11]
 /**
  * Get distance in semitones from `[0, 0, 0]` (`'C0'` or `'1P'`)
  *
- * @name semitones
+ * Notice that pitch classes are asumed to have octave 0
+ *
+ * @name height
  * @function
  * @param {Array} pitch - the pitch or interval
  * @return {Integer} the distance
  *
  * @example
- * op.semitones([1, 1, 0]) // => 3
- * op.semitones([0, 0, 0]) // => 0
+ * op.height([0, 0, 0]) // => 0
+ * op.height([1, 1, 0]) // => 3
+ * op.height([1, 1]) // => 3 // 'D#0' is same as 'D#'
  */
-op.semitones = function (i) { return i ? SEMITONES[i[0] % 7] + i[1] + 12 * i[2] : null }
+op.height = function (i) {
+  return i ? SEMITONES[i[0] % 7] + i[1] + 12 * (i[2] || 0) : null
+}
 
 /**
  * Compare the height of two pitches. Can be used as comparator for array.sort()
@@ -104,7 +109,7 @@ op.semitones = function (i) { return i ? SEMITONES[i[0] % 7] + i[1] + 12 * i[2] 
  * @example
  * arrayOfPitches.sort(op.compare) // => array in ascending order
  */
-op.compare = function (a, b) { return op.semitones(a) - op.semitones(b) }
+op.compare = function (a, b) { return op.height(a) - op.height(b) }
 
 // The fifths vector representation of: 1P, 2M, 3M, 4P, 5P, 6M, 7M
 var BASE_TO = [ [0, 0], [2, -1], [4, -2], [-1, 1], [1, 0], [3, -1], [5, -2] ]
